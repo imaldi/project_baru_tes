@@ -173,7 +173,7 @@ class _RegisterSreenState extends State<RegisterSreen> {
                             ),
                             TextButton(
                               onPressed: () {
-                                Navigator.push(
+                                Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) => LoginScreen(),

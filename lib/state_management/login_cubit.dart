@@ -37,4 +37,16 @@ class LoginCubit extends Cubit<LoginState> {
       emit(const LoginState.loggedIn());
     }
   }
+
+  Future<void> logOut() async {
+    // emit(const LoginState.loading());
+    final prefs = await SharedPreferences.getInstance();
+    final isLoggedInApp = await prefs.setBool(isLoggedIn,false);
+
+    if (isLoggedInApp) {
+      emit(LoginState.loggedOut());
+    } else {
+      emit(const LoginState.loggedIn());
+    }
+  }
 }

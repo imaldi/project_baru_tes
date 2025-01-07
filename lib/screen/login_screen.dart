@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:project_baru_tes/screen/home_screen.dart';
+import 'package:project_baru_tes/screen/register_sreen.dart';
 import 'package:project_baru_tes/state_management/login_cubit.dart';
 import 'package:project_baru_tes/widget/my_gradient_container.dart';
 
@@ -59,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
       },
       builder: (ctx, state) => Scaffold(
         appBar: AppBar(
-          title: Text("Ini appbar"),
+          title: Text("Login Screen"),
         ),
         body: Center(
           child: MyGradientContainer(
@@ -169,6 +170,33 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ),
+                    ),
+                    const SizedBox(height: 20),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'Doesn\'t Have an account?',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => RegisterSreen(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            'REGISTER',
+                            style: TextStyle(
+                              color: Colors.white,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

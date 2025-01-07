@@ -53,7 +53,7 @@ mixin _$LoginState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_LoggedOut value) loggedIn,
+    required TResult Function(_LoggedIn value) loggedIn,
     required TResult Function(_LoggedOut value) loggedOut,
   }) =>
       throw _privateConstructorUsedError;
@@ -63,7 +63,7 @@ mixin _$LoginState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_LoggedOut value)? loggedIn,
+    TResult? Function(_LoggedIn value)? loggedIn,
     TResult? Function(_LoggedOut value)? loggedOut,
   }) =>
       throw _privateConstructorUsedError;
@@ -73,7 +73,7 @@ mixin _$LoginState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Failure value)? failure,
-    TResult Function(_LoggedOut value)? loggedIn,
+    TResult Function(_LoggedIn value)? loggedIn,
     TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) =>
@@ -189,7 +189,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_LoggedOut value) loggedIn,
+    required TResult Function(_LoggedIn value) loggedIn,
     required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return initial(this);
@@ -202,7 +202,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_LoggedOut value)? loggedIn,
+    TResult? Function(_LoggedIn value)? loggedIn,
     TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return initial?.call(this);
@@ -215,7 +215,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Failure value)? failure,
-    TResult Function(_LoggedOut value)? loggedIn,
+    TResult Function(_LoggedIn value)? loggedIn,
     TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
@@ -318,7 +318,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_LoggedOut value) loggedIn,
+    required TResult Function(_LoggedIn value) loggedIn,
     required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return loading(this);
@@ -331,7 +331,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_LoggedOut value)? loggedIn,
+    TResult? Function(_LoggedIn value)? loggedIn,
     TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return loading?.call(this);
@@ -344,7 +344,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Failure value)? failure,
-    TResult Function(_LoggedOut value)? loggedIn,
+    TResult Function(_LoggedIn value)? loggedIn,
     TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
@@ -447,7 +447,7 @@ class _$SuccessImpl implements _Success {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_LoggedOut value) loggedIn,
+    required TResult Function(_LoggedIn value) loggedIn,
     required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return success(this);
@@ -460,7 +460,7 @@ class _$SuccessImpl implements _Success {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_LoggedOut value)? loggedIn,
+    TResult? Function(_LoggedIn value)? loggedIn,
     TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return success?.call(this);
@@ -473,7 +473,7 @@ class _$SuccessImpl implements _Success {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Failure value)? failure,
-    TResult Function(_LoggedOut value)? loggedIn,
+    TResult Function(_LoggedIn value)? loggedIn,
     TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
@@ -603,7 +603,7 @@ class _$FailureImpl implements _Failure {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_LoggedOut value) loggedIn,
+    required TResult Function(_LoggedIn value) loggedIn,
     required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return failure(this);
@@ -616,7 +616,7 @@ class _$FailureImpl implements _Failure {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_LoggedOut value)? loggedIn,
+    TResult? Function(_LoggedIn value)? loggedIn,
     TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return failure?.call(this);
@@ -629,7 +629,7 @@ class _$FailureImpl implements _Failure {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Failure value)? failure,
-    TResult Function(_LoggedOut value)? loggedIn,
+    TResult Function(_LoggedIn value)? loggedIn,
     TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
@@ -653,18 +653,18 @@ abstract class _Failure implements LoginState {
 }
 
 /// @nodoc
-abstract class _$$LoggedOutImplCopyWith<$Res> {
-  factory _$$LoggedOutImplCopyWith(
-          _$LoggedOutImpl value, $Res Function(_$LoggedOutImpl) then) =
-      __$$LoggedOutImplCopyWithImpl<$Res>;
+abstract class _$$LoggedInImplCopyWith<$Res> {
+  factory _$$LoggedInImplCopyWith(
+          _$LoggedInImpl value, $Res Function(_$LoggedInImpl) then) =
+      __$$LoggedInImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoggedOutImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$LoggedOutImpl>
-    implements _$$LoggedOutImplCopyWith<$Res> {
-  __$$LoggedOutImplCopyWithImpl(
-      _$LoggedOutImpl _value, $Res Function(_$LoggedOutImpl) _then)
+class __$$LoggedInImplCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res, _$LoggedInImpl>
+    implements _$$LoggedInImplCopyWith<$Res> {
+  __$$LoggedInImplCopyWithImpl(
+      _$LoggedInImpl _value, $Res Function(_$LoggedInImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of LoginState
@@ -673,8 +673,8 @@ class __$$LoggedOutImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoggedOutImpl implements _LoggedOut {
-  const _$LoggedOutImpl();
+class _$LoggedInImpl implements _LoggedIn {
+  const _$LoggedInImpl();
 
   @override
   String toString() {
@@ -684,7 +684,7 @@ class _$LoggedOutImpl implements _LoggedOut {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoggedOutImpl);
+        (other.runtimeType == runtimeType && other is _$LoggedInImpl);
   }
 
   @override
@@ -740,7 +740,7 @@ class _$LoggedOutImpl implements _LoggedOut {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_LoggedOut value) loggedIn,
+    required TResult Function(_LoggedIn value) loggedIn,
     required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return loggedIn(this);
@@ -753,7 +753,7 @@ class _$LoggedOutImpl implements _LoggedOut {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_LoggedOut value)? loggedIn,
+    TResult? Function(_LoggedIn value)? loggedIn,
     TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return loggedIn?.call(this);
@@ -766,7 +766,7 @@ class _$LoggedOutImpl implements _LoggedOut {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Failure value)? failure,
-    TResult Function(_LoggedOut value)? loggedIn,
+    TResult Function(_LoggedIn value)? loggedIn,
     TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
@@ -777,8 +777,8 @@ class _$LoggedOutImpl implements _LoggedOut {
   }
 }
 
-abstract class _LoggedOut implements LoginState {
-  const factory _LoggedOut() = _$LoggedOutImpl;
+abstract class _LoggedIn implements LoginState {
+  const factory _LoggedIn() = _$LoggedInImpl;
 }
 
 /// @nodoc
@@ -869,7 +869,7 @@ class _$LoggedOutImpl implements _LoggedOut {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_LoggedOut value) loggedIn,
+    required TResult Function(_LoggedIn value) loggedIn,
     required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return loggedOut(this);
@@ -882,7 +882,7 @@ class _$LoggedOutImpl implements _LoggedOut {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_LoggedOut value)? loggedIn,
+    TResult? Function(_LoggedIn value)? loggedIn,
     TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return loggedOut?.call(this);
@@ -895,7 +895,7 @@ class _$LoggedOutImpl implements _LoggedOut {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Failure value)? failure,
-    TResult Function(_LoggedOut value)? loggedIn,
+    TResult Function(_LoggedIn value)? loggedIn,
     TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {

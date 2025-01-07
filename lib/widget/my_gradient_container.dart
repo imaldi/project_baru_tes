@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class MyGradientContainer extends StatelessWidget {
   final double width;
   final double height;
+  final BoxConstraints? constraints;
   final Widget? child;
   final TextStyle textStyle;
 
@@ -10,6 +11,7 @@ class MyGradientContainer extends StatelessWidget {
     Key? key,
     this.width = double.infinity,
     this.height = double.infinity,
+    this.constraints,
     this.child,
     this.textStyle = const TextStyle(
       color: Colors.white, // Warna default putih
@@ -22,6 +24,7 @@ class MyGradientContainer extends StatelessWidget {
     return Container(
       width: width,
       height: height,
+      constraints: constraints,
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           begin: Alignment.topLeft,

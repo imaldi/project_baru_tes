@@ -36,7 +36,7 @@ class RegisterCubit extends Cubit<RegistrationState> {
 
     result.fold(
       (failure) {
-        // emit(RegistrationState.failure(message: failure.errorMessage));
+        emit(RegistrationState.failure(failure.errorMessage));
       },
       (success) {
         emit(const RegistrationState.success());

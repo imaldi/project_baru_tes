@@ -4,6 +4,8 @@ import 'package:project_baru_tes/screen/login_screen.dart';
 import 'package:project_baru_tes/state_management/login_cubit.dart';
 import 'package:project_baru_tes/widget/my_gradient_container.dart';
 
+import 'home_screen.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -15,7 +17,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.microtask(() {
-      context.read<LoginCubit>().checkIsLogin();
+      Future.delayed(Duration(seconds: 2),(){
+        context.read<LoginCubit>().checkIsLogin();
+      });
     });
     super.initState();
   }
@@ -25,19 +29,30 @@ class _SplashScreenState extends State<SplashScreen> {
     return BlocConsumer<LoginCubit, LoginState>(listener: (ctx, state) {
       state.maybeWhen(
           loggedIn: () {
-            Navigator.push(
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => HomeScreen(),
+              ),
+            );
+          },
+          orElse: () {
+            Navigator.pushReplacement(
               context,
               MaterialPageRoute(
                 builder: (context) => LoginScreen(),
               ),
             );
-          },
-          orElse: () {});
+          });
     }, builder: (ctx, state) {
-      return MyGradientContainer(
-        height: 300,
-        width: 300,
-        child: Text("Splash Screen"),
+      return Scaffold(
+        body: Center(
+          child: MyGradientContainer(
+            height: 300,
+            width: 300,
+            child: Center(child: Text("Splash Screen", style: TextStyle(fontSize: 32.0),)),
+          ),
+        ),
       );
     });
   }

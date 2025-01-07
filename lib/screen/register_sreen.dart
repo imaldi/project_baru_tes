@@ -20,8 +20,6 @@ class _RegisterSreenState extends State<RegisterSreen> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController passwordConfirmationController =
-      TextEditingController();
   final TextEditingController referralController = TextEditingController();
   final TextEditingController addressController = TextEditingController();
   final TextEditingController roleController = TextEditingController();
@@ -37,7 +35,7 @@ class _RegisterSreenState extends State<RegisterSreen> {
         }, failure: (appFailure) {
           EasyLoading.dismiss();
           Fluttertoast.showToast(
-              msg: "GagalLogin, ${appFailure ?? ""}",
+              msg: "Gagal Register, ${appFailure ?? ""}",
               toastLength: Toast.LENGTH_SHORT,
               gravity: ToastGravity.BOTTOM,
               timeInSecForIosWeb: 1,
@@ -47,7 +45,7 @@ class _RegisterSreenState extends State<RegisterSreen> {
         }, success: () {
           EasyLoading.dismiss();
           Fluttertoast.showToast(
-              msg: "Berhasil Login",
+              msg: "Berhasil Register",
               toastLength: Toast.LENGTH_SHORT,
               gravity: ToastGravity.BOTTOM,
               timeInSecForIosWeb: 1,
@@ -153,8 +151,8 @@ class _RegisterSreenState extends State<RegisterSreen> {
                                   email: emailController.text,
                                   password: passwordController.text,
                                   passwordConfirmation:
-                                      passwordConfirmationController.text,
-                                  role: roleController.text,
+                                    passwordController.text,
+                                  referral: referralController.text,
                                   phone: phoneController.text,
                                   address: addressController.text);
                             }

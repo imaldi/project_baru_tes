@@ -7,11 +7,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: MyGradientContainer(
-        height: 300,
-        width: 300,
-        child: Center(
-          child: Text("Welcome to my app"),
+      body: Center(
+        child: MyGradientContainer(
+          height: 300,
+          width: 300,
+          child: Center(
+            child: Text("Welcome to my app"),
+          ),
         ),
       ),
     );
